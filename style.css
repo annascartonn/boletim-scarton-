@@ -139,4 +139,47 @@ body {
 .tabela-boletim td {
   padding: 12px;
   border-bottom: 1px solid #1b263b;
-  font-size:
+  font-size: 0.95rem;
+}
+
+/* Regras de cores para as notas */
+.nota-excelente {
+  color: #2ecc71; /* Verde vivo (> 9,0) */
+  font-weight: bold;
+}
+
+.nota-boa {
+  color: #ffcc00; /* Amarelo vibrante (6,0 a 8,9) */
+  font-weight: bold;
+}
+
+.nota-atencao {
+  color: #ff4757; /* Vermelho (< 5,9) */
+  font-weight: bold;
+}
+
+.nota-ausente {
+  color: #888888;
+  font-style: italic;
+}
+
+/* Destaques de Situação */
+.situacao-bom {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #2ecc71;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.situacao-atencao {
+  background-color: rgba(255, 71, 87, 0.2);
+  color: #ff4757;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.situacao-indisponivel {
+  color: #888888;
+}
