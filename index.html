@@ -1,11 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boletim Digital - 9º Ano</title>
+  <!-- Link para o nosso arquivo de estilos CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    meu boletim
+
+  <!-- Container principal do boletim com estilo de moldura -->
+  <main class="boletim-frame">
+    
+    <!-- Cabeçalho do projeto -->
+    <header class="header">
+      <h1 class="titulo-principal">Boletim Digital</h1>
+      <p class="subtitulo">9º Ano — Ensino Fundamental</p>
+      <p class="estudante-info">Estudante: <strong>Estudante Exemplo</strong></p>
+    </header>
+
+    <!-- Área de cards de resumo -->
+    <section class="cards-grid">
+      
+      <div class="card card-destaque">
+        <h3>Média Geral</h3>
+        <p id="card-media" class="card-valor">—</p>
+      </div>
+
+      <div class="card">
+        <h3>Total de Faltas</h3>
+        <p id="card-faltas" class="card-valor">—</p>
+      </div>
+
+      <div class="card">
+        <h3>Bom Desempenho</h3>
+        <p id="card-bom-desempenho" class="card-valor">—</p>
+      </div>
+
+      <div class="card">
+        <h3>Precisa de Atenção</h3>
+        <p id="card-atencao" class="card-valor">—</p>
+      </div>
+
+      <div class="card card-frequencia">
+        <h3>Frequência Geral</h3>
+        <p class="card-valor">92%</p>
+        <span class="tag-frequencia">Frequência adequada</span>
+      </div>
+
+    </section>
+
+    <!-- Tabela com as disciplinas e notas -->
+    <section class="tabela-container">
+      <table class="tabela-boletim">
+        <thead>
+          <tr>
+            <th>Disciplina</th>
+            <th>1º Tri</th>
+            <th>2º Tri</th>
+            <th>3º Tri</th>
+            <th>Média</th>
+            <th>Faltas</th>
+            <th>Situação</th>
+          </tr>
+        </thead>
+        <tbody id="corpo-tabela">
+          <!-- As linhas de disciplinas serão inseridas dinamicamente pelo script.js -->
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+
+  <!-- Script que trará toda a lógica em JS -->
+  <script src="script.js"></script>
 </body>
 </html>

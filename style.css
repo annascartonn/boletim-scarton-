@@ -1,0 +1,142 @@
+/* Reset básico de margens e fontes */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* Fundo da página em tom de azul petróleo escuro */
+body {
+  background-color: #0d1b2a;
+  color: #ffffff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Estrutura principal com visual de moldura de quadro em preto e brilho amarelo */
+.boletim-frame {
+  width: 100%;
+  max-width: 1100px;
+  background-color: #1b263b;
+  border: 6px solid #000000;
+  border-radius: 16px;
+  padding: 25px;
+  box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+}
+
+/* Cabeçalho com destaque amarelo vibrante e fundo preto */
+.header {
+  text-align: center;
+  background-color: #000000;
+  padding: 20px;
+  border-radius: 12px;
+  border-bottom: 4px solid #ffcc00;
+  margin-bottom: 25px;
+}
+
+.titulo-principal {
+  font-size: 2.2rem;
+  color: #ffcc00;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.subtitulo {
+  font-size: 1.2rem;
+  color: #ff9900;
+  margin-top: 5px;
+}
+
+.estudante-info {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #e0e1dd;
+}
+
+/* Grade para os cards de resumo */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Estilo dos cards com formato de moldura preta */
+.card {
+  background-color: #0d1b2a;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+}
+
+.card h3 {
+  font-size: 0.9rem;
+  color: #ff9900;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.card-valor {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+/* Efeito de luz nos cards de destaque */
+.card-destaque {
+  box-shadow: 0 0 12px rgba(255, 204, 0, 0.5);
+  border-color: #ffcc00;
+}
+
+.card-frequencia {
+  box-shadow: 0 0 12px rgba(46, 204, 113, 0.4);
+  border-color: #2ecc71;
+}
+
+.tag-frequencia {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 0.75rem;
+  background-color: #2ecc71;
+  color: #000000;
+  padding: 3px 8px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+/* Tabela responsiva com rolagem em telas pequenas */
+.tabela-container {
+  overflow-x: auto;
+  border: 3px solid #000000;
+  border-radius: 12px;
+  background-color: #0d1b2a;
+}
+
+.tabela-boletim {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: center;
+}
+
+.tabela-boletim th {
+  background-color: #000000;
+  color: #ffcc00;
+  padding: 14px;
+  font-size: 0.95rem;
+  border-bottom: 2px solid #ff9900;
+}
+
+.tabela-boletim td {
+  padding: 12px;
+  border-bottom: 1px solid #1b263b;
+  font-size:
