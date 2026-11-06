@@ -70,6 +70,35 @@
 
       </section>
 
+      <!-- Área de Gráficos do Boletim -->
+      <section class="area-graficos">
+        
+        <article class="grafico-card">
+          <h2>Média por disciplina</h2>
+          <div class="grafico-container">
+            <canvas id="graficoMediasDisciplinas"></canvas>
+          </div>
+        </article>
+
+        <article class="grafico-card">
+          <h2>Evolução da média geral</h2>
+          <div class="grafico-container">
+            <canvas id="graficoEvolucaoTrimestres"></canvas>
+          </div>
+        </article>
+
+        <article id="card-grafico-faltas" class="grafico-card">
+          <div class="cabecalho-card-faltas">
+            <h2>Faltas por trimestre</h2>
+            <div id="estadoFaltas"></div>
+          </div>
+          <div class="grafico-container">
+            <canvas id="graficoFaltasTrimestres"></canvas>
+          </div>
+        </article>
+
+      </section>
+
       <!-- Tabela com as disciplinas e notas (Modo Visualização) -->
       <section id="secao-tabela-visualizacao" class="tabela-container">
         <table class="tabela-boletim">
@@ -127,6 +156,8 @@
 
   </main>
 
+  <!-- Biblioteca Chart.js para geração dos gráficos -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <!-- Script que trará toda a lógica em JS -->
   <script src="script.js"></script>
 </body>
