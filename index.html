@@ -19,56 +19,111 @@
       <p class="estudante-info">Estudante: <strong>Estudante Exemplo</strong></p>
     </header>
 
-    <!-- Área de cards de resumo -->
-    <section class="cards-grid">
+    <!-- Tela de Acesso por PIN -->
+    <section id="secao-login" class="card-login">
+      <h2>Acesso ao Boletim</h2>
+      <p class="info-aluno-login">Turma: <strong>9B</strong> | Chamada: <strong>2</strong></p>
+      <div class="form-grupo">
+        <label for="campo-pin">Digite seu PIN:</label>
+        <input type="password" id="campo-pin" placeholder="****" maxlength="10">
+      </div>
+      <button id="btn-entrar" type="button" class="btn-primario">Entrar</button>
+      <p id="msg-login" class="mensagem-status"></p>
+    </section>
+
+    <!-- Conteúdo do Boletim (inicialmente oculto) -->
+    <div id="conteudo-boletim" style="display: none;">
       
-      <div class="card card-destaque">
-        <h3>Média Geral</h3>
-        <p id="card-media" class="card-valor">—</p>
+      <!-- Barra de Ações do Boletim -->
+      <div class="barra-acoes">
+        <button id="btn-alterar-dados" type="button" class="btn-secundario">Alterar dados</button>
       </div>
 
-      <div class="card">
-        <h3>Total de Faltas</h3>
-        <p id="card-faltas" class="card-valor">—</p>
-      </div>
+      <!-- Área de cards de resumo -->
+      <section class="cards-grid">
+        
+        <div class="card card-destaque">
+          <h3>Média Geral</h3>
+          <p id="card-media" class="card-valor">—</p>
+        </div>
 
-      <div class="card">
-        <h3>Bom Desempenho</h3>
-        <p id="card-bom-desempenho" class="card-valor">—</p>
-      </div>
+        <div class="card">
+          <h3>Total de Faltas</h3>
+          <p id="card-faltas" class="card-valor">—</p>
+        </div>
 
-      <div class="card">
-        <h3>Precisa de Atenção</h3>
-        <p id="card-atencao" class="card-valor">—</p>
-      </div>
+        <div class="card">
+          <h3>Bom Desempenho</h3>
+          <p id="card-bom-desempenho" class="card-valor">—</p>
+        </div>
 
-      <div class="card card-frequencia">
-        <h3>Frequência Geral</h3>
-        <p class="card-valor">92%</p>
-        <span class="tag-frequencia">Frequência adequada</span>
-      </div>
+        <div class="card">
+          <h3>Precisa de Atenção</h3>
+          <p id="card-atencao" class="card-valor">—</p>
+        </div>
 
-    </section>
+        <div class="card card-frequencia">
+          <h3>Frequência Geral</h3>
+          <p class="card-valor">92%</p>
+          <span class="tag-frequencia">Frequência adequada</span>
+        </div>
 
-    <!-- Tabela com as disciplinas e notas -->
-    <section class="tabela-container">
-      <table class="tabela-boletim">
-        <thead>
-          <tr>
-            <th>Disciplina</th>
-            <th>1º Tri</th>
-            <th>2º Tri</th>
-            <th>3º Tri</th>
-            <th>Média</th>
-            <th>Faltas</th>
-            <th>Situação</th>
-          </tr>
-        </thead>
-        <tbody id="corpo-tabela">
-          <!-- As linhas de disciplinas serão inseridas dinamicamente pelo script.js -->
-        </tbody>
-      </table>
-    </section>
+      </section>
+
+      <!-- Tabela com as disciplinas e notas (Modo Visualização) -->
+      <section id="secao-tabela-visualizacao" class="tabela-container">
+        <table class="tabela-boletim">
+          <thead>
+            <tr>
+              <th>Disciplina</th>
+              <th>1º Tri</th>
+              <th>2º Tri</th>
+              <th>3º Tri</th>
+              <th>Média</th>
+              <th>Faltas</th>
+              <th>Situação</th>
+            </tr>
+          </thead>
+          <tbody id="corpo-tabela">
+            <!-- As linhas de disciplinas serão inseridas dinamicamente pelo script.js -->
+          </tbody>
+        </table>
+      </section>
+
+      <!-- Formulário de Edição (Modo Edição) -->
+      <section id="secao-edicao" class="edicao-container" style="display: none;">
+        <h2>Editar Notas e Faltas</h2>
+        <p class="aviso-edicao">Digite notas de 0 a 10 (ex: 7,5 ou 8.2). Deixe em branco se a nota não estiver lançada.</p>
+        
+        <form id="form-edicao">
+          <div class="tabela-container">
+            <table class="tabela-boletim tabela-edicao">
+              <thead>
+                <tr>
+                  <th>Disciplina</th>
+                  <th>1º Tri</th>
+                  <th>2º Tri</th>
+                  <th>3º Tri</th>
+                  <th>Faltas 1º Tri</th>
+                  <th>Faltas 2º Tri</th>
+                  <th>Faltas 3º Tri</th>
+                </tr>
+              </thead>
+              <tbody id="corpo-tabela-edicao">
+                <!-- Linhas de campos editáveis geradas pelo script.js -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="painel-botoes-edicao">
+            <button id="btn-salvar" type="button" class="btn-primario">Salvar alterações</button>
+            <button id="btn-cancelar" type="button" class="btn-cancelar">Cancelar</button>
+          </div>
+          <p id="msg-salvar" class="mensagem-status"></p>
+        </form>
+      </section>
+
+    </div>
 
   </main>
 
